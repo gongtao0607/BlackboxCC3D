@@ -24,7 +24,7 @@ The BlackboxCC3D send sampled data to Main Port (USART1). By connecting to an Op
     RPM   <-   S6 IN <<--   S6 OUT    <-    RPM Sensor
 ```
 
-*Note that the pass-through direction for S6 is reversed, since the RPM signal is usually send from a male type connector (RPM sensor), to a female type connector (gyro RPM sensor port). Also remember only S1 IN and S1-6 OUTs have power connectors.*
+*Note that the pass-through direction for S6 is reversed, since the RPM signal usually send from a male type connector (RPM sensor), to a female type connector (gyro RPM sensor port). Also remember only S1 IN and S1-6 OUTs have power connectors.*
 
 ## DSM2 satellite:
 The BlackboxCC3D can either share the satellite with FBL gyro, or use a dedicated one.
