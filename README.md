@@ -15,13 +15,13 @@ The BlackboxCC3D send sampled data to Main Port (USART1). By connecting to an Op
 # Connection
 ## PWM/RPM signals:
 ```
-(RX Port)  (Output Port)
-  S1 IN -->> S1 OUT (PWM)
-  S2 IN -->> S2 OUT (PWM)
-  S3 IN -->> S3 OUT (PWM)
-  S4 IN -->> S4 OUT (PWM)
-  S5 IN -->> S5 OUT (PWM)
-  S6 IN <<-- S6 OUT (RPM)
+(FBL GYRO)  ((RX Port)  (Output Port))  (Servo/ESC/Sensor)
+    CH1   ->   S1 IN -->>   S1 OUT    ->    Servo 1
+    CH2   ->   S2 IN -->>   S2 OUT    ->    Servo 2
+    CH3   ->   S3 IN -->>   S3 OUT    ->    Servo 3
+    CH4   ->   S4 IN -->>   S4 OUT    ->    Servo 4
+    CH5   ->   S5 IN -->>   S5 OUT    ->    ESC
+    RPM   <-   S6 IN <<--   S6 OUT    <-    RPM Sensor
 ```
 
 *Note that the pass-through direction for S6 is reversed, since the RPM signal is usually send from a male type connector (RPM sensor), to a female type connector (gyro RPM sensor port). Also remember only S1 IN and S1-6 OUTs have power connectors.*
