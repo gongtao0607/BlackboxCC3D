@@ -3,11 +3,11 @@
 The BlackboxCC3D is a firmware running on CC3D/ATOM platfrom to serve as a flight data recorder (Black box). The firmware implements the (digital) signal pass-through between "Output ports" and "Receiver port" (the original naming from CC3D), so that no Y-cable is needed to monitor the signal. The BlackboxCC3D can be extremely helpful to tune the parameters on 3 axis gyros
 
 The BlackboxCC3D currently records following signals:
-* 5 PWM signals + 1 RPM signal
+* 5 PWM signals + 1 RPM signal:
 The 6 RX-Ports/Output-ports can be used to record servo PWM signal (duty width), or RPM signal (cycle width)
-* Orientation
+* Orientation:
 The Quaternion computed by MPU6050 DMP module is recorded. The quaternion can be later decoded to orientation (Yaw/Pitch/Roll), or 3 axis integral (the sensor reading of a FBL gyro)
-* DSM2 satellite signal
+* DSM2 satellite signal:
 Can be used to record transmitter signals.
 
 The BlackboxCC3D send sampled data to Main Port (USART1). By connecting to an OpenLog module, all the data can be stored to an Micro-SD card. The data can be decoded and analyzed/visualized by a python script.
