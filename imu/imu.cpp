@@ -80,12 +80,12 @@ static void EXTI_Configuration(){
 }
 
 void mpu_select(){
-	delay_us(10);
+	delay_us(1);
 	GPIO_WriteBit(GPIOA, GPIO_Pin_4, Bit_RESET);
-	delay_us(10);
+	delay_us(1);
 }
 void mpu_deselect(){
-	delay_us(10);
+	delay_us(1);
 	GPIO_WriteBit(GPIOA, GPIO_Pin_4, Bit_SET);
 }
 
@@ -96,7 +96,7 @@ uint8_t spi_send(uint8_t data){
 	while( SPI_I2S_GetFlagStatus(SPI1,SPI_I2S_FLAG_BSY)==SET );
 	return SPI_I2S_ReceiveData(SPI1);
 }
-void mpu_init(){
+void imu_init(){
     RCC_Configuration();
     SPI_Configuration();
     mpu6050.reset();

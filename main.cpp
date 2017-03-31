@@ -30,7 +30,7 @@ int main()
 	delay_init();
 	led_init();
 	pwm_init();
-	mpu_init();
+	imu_init();
 	log_init();
 	receiver_init();
 	usb_init();
