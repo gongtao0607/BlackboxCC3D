@@ -18,15 +18,8 @@ uint8_t fifoBuffer[64]; // FIFO storage buffer
 
 // orientation/motion vars
 Quaternion q;           // [w, x, y, z]         quaternion container
-Quaternion q0(1,0,0,0);
-VectorInt16 aa;         // [x, y, z]            accel sensor measurements
-VectorInt16 aaReal;     // [x, y, z]            gravity-free accel sensor measurements
-VectorInt16 aaWorld;    // [x, y, z]            world-frame accel sensor measurements
-VectorFloat gravity;    // [x, y, z]            gravity vector
-float euler[3];         // [psi, theta, phi]    Euler angle container
-float ypr[3];           // [yaw, pitch, roll]   yaw/pitch/roll container and gravity vector
 float quaternion[4];
-volatile uint8_t dmp_count;
+
 static void RCC_Configuration(void)
 {
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA | RCC_APB2Periph_AFIO | RCC_APB2Periph_SPI1, ENABLE);
@@ -85,19 +78,19 @@ static void EXTI_Configuration(){
 
 	NVIC_InitTypeDef NVIC_InitStructure;
     NVIC_InitStructure.NVIC_IRQChannel = EXTI3_IRQn;
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0xC;
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 8;
     NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
     NVIC_Init(&NVIC_InitStructure);
 }
 
 void mpu_select(){
-	delay_us(1);
+	delay_us(10);
 	GPIO_WriteBit(GPIOA, GPIO_Pin_4, Bit_RESET);
-	delay_us(1);
+	delay_us(10);
 }
 void mpu_deselect(){
-	delay_us(1);
+	delay_us(10);
 	GPIO_WriteBit(GPIOA, GPIO_Pin_4, Bit_SET);
 }
 
@@ -108,50 +101,21 @@ uint8_t spi_send(uint8_t data){
 	while( SPI_I2S_GetFlagStatus(SPI1,SPI_I2S_FLAG_BSY)==SET );
 	return SPI_I2S_ReceiveData(SPI1);
 }
-int32_t xgOffset=0;
-int32_t ygOffset=0;
-int32_t zgOffset=0;
-void mpu_calibrate(uint16_t count){
-	uint16_t i;
-	mpu6050.setXGyroOffset(0);
-	mpu6050.setYGyroOffset(0);
-	mpu6050.setZGyroOffset(0);
-    delay_ms(10);
-	for(i=0;i<100;++i){
-		mpu6050.getRotationX();
-		mpu6050.getRotationY();
-		mpu6050.getRotationZ();
-	}
-	for(i=0;i<count;++i){
-		xgOffset+=mpu6050.getRotationX();
-		ygOffset+=mpu6050.getRotationY();
-		zgOffset+=mpu6050.getRotationZ();
-		delay_ms(10);
-	}
-	xgOffset/=count;
-	ygOffset/=count;
-	zgOffset/=count;
-}
 void mpu_init(){
     RCC_Configuration();
     SPI_Configuration();
     mpu6050.reset();
-    delay_ms(30);
-    mpu6050.initialize();
-    mpu_calibrate(100);
+    delay_ms(50);
     while(!mpu6050.testConnection());
     while(mpu6050.dmpInitialize()!=0);
-	printf("Offset: %d %d %d\n",xgOffset,ygOffset,zgOffset);
     mpu6050.setDMPEnabled(true);
     packetSize = mpu6050.dmpGetFIFOPacketSize();
     mpu6050.setIntDataReadyEnabled(true);
     EXTI_Configuration();
-
 }
 extern "C" void EXTI3_IRQHandler(){
     if (EXTI_GetITStatus(EXTI_Line3) != RESET){
     	GPIO_WriteBit(GPIOB, GPIO_Pin_3, Bit_RESET);
-        bool mpuInterrupt = false;
         uint8_t mpuIntStatus = mpu6050.getIntStatus();
 
         // get current FIFO count

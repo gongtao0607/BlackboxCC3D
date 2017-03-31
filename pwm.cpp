@@ -4,7 +4,7 @@
 #include <stm32f10x_usart.h>
 #include <misc.h>
 #include "pwm.h"
-uint16_t pwm_duty_width[n_channels]={0xffff,0xffff,0xffff,0xffff,0xffff,0xffff};
+uint16_t pwm_duty_width[n_channels]={};
 uint16_t pwm_cycle_width[n_channels]={};
 /*
  * Input -> Output

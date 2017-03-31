@@ -7,6 +7,7 @@
 #include <stdarg.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include "log.h"
 
 #undef errno
 extern int errno;
@@ -96,7 +97,8 @@ int _write(int file, char *ptr, int len)
      for(i = 0; i < len; i++)
      {
         // UART_PutChar is user's basic output function
-        UART_PutChar(*ptr++);
+        //UART_PutChar(*ptr++);
+    	log_putchar(*ptr++);
      }
 #endif
 
