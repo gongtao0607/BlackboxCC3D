@@ -1,11 +1,6 @@
 #include "stm32f10x.h"
-#include "stm32f10x_rcc.h"
-#include "stm32f10x_gpio.h"
-#include "stm32f10x_spi.h"
-#include "stm32f10x_exti.h"
 #include "MPU6050_6Axis_MotionApps20.h"
 #include "MPU6050.h"
-#include <misc.h>
 #include <stdio.h>
 
 MPU6050 mpu6050;

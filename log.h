@@ -8,9 +8,12 @@ extern void log_1(float);
 extern void log_sync();
 #endif
 #ifdef __cplusplus
-extern "C" void log_putchar(const char);
-#else
-extern void log_putchar(const char);
+extern "C" {
 #endif
-extern void log_send(const unsigned char*, unsigned long);
+void log_putchar(const char);
+void log_putchar(const char);
+void log_send(const unsigned char*, unsigned long);
+#ifdef __cplusplus
+}
+#endif
 #endif

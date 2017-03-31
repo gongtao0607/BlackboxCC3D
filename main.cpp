@@ -1,14 +1,12 @@
 #include <stdio.h>
-#include <stm32f10x_gpio.h>
-#include <stm32f10x_rcc.h>
-#include <misc.h>
-#include <string.h>
+#include <stm32f10x.h>
 #include "pwm.h"
 #include "mpu.h"
 #include "log.h"
 #include "delay.h"
 #include "math.h"
 #include "receiver.h"
+#include "usb.h"
 
 void led_init(){
 	//Enable remap clock (AFIO)
@@ -35,6 +33,7 @@ int main()
 	mpu_init();
 	log_init();
 	receiver_init();
+	usb_init();
 	while(1){
 //#define NOLOG
 #ifndef NOLOG

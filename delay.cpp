@@ -1,5 +1,4 @@
-#include <stm32f10x_rcc.h>
-#include <misc.h>
+#include <stm32f10x.h>
 volatile uint32_t millis;
 #define reload_ticks (SystemCoreClock/1000)
 extern "C" void SysTick_Handler (void)
