@@ -13,7 +13,8 @@ Can be used to record transmitter signals.
 The BlackboxCC3D send sampled data to Main Port (USART1). By connecting to an OpenLog module, all the data can be stored to an Micro-SD card. The data can be decoded and analyzed/visualized by a python script.
 
 # Connection
-PWM/RPM signals:
+## PWM/RPM signals:
+```
 (RX Port)   (Output Port)
   S1 IN  ->   S1 OUT (PWM)
   S2 IN  ->   S2 OUT (PWM)
@@ -21,21 +22,25 @@ PWM/RPM signals:
   S4 IN  ->   S4 OUT (PWM)
   S5 IN  ->   S5 OUT (PWM)
   S6 IN  <-   S6 OUT (RPM)
+```
+
 Note that the pass-through direction for S6 is reversed, since the RPM signal is usually send from a male type connector (RPM sensor), to a female type connector (gyro RPM sensor port). Also remember only S1 IN and S1-6 OUTs have power connectors.
 
-DSM2 satellite:
+## DSM2 satellite:
 The BlackboxCC3D can either share the satellite with FBL gyro, or use a dedicated one.
-Shared:
+* Shared:
 Connect only the RX wire of Main/Flexi Port to a satellite signal. (Make a joint cable). No other wires are required if the BlackboxCC3D is already connect to the FBL gyro. (If not, connect the ground wire)
+```
 Satellite ------- (-) FBL Gyro
           ------- (+)
           ---|--- (S)
              |
         BlackboxCC3D
-Dedicated:
+```
+* Dedicated:
 You need to make a voltage regulator cable since the satellite runs at 3.3V
 
 The satellite signal can either run to USART1 (Main Port), which will shared by the OpenLog (since we only TX to OpenLog), or run to USART3 (Flexi Port). Running to Main Port is easier for a shared connection wiring, while the the Flexi Port is easier for a dedicated connection wiring.
 
-OpenLog:
+## OpenLog:
 The OpenLog module need to connect to the Main Port for data storage. 3 wires (GND, VCC, TX) should connect to the OpenLog (GND, VCC, *RX*). If Main Port is shared by OpenLog and DSM2 satellite, only one baud rate can run (115200, since the satellite runs on that)
