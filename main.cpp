@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stm32f10x.h>
 #include "pwm.h"
-#include "mpu.h"
+#include "imu.h"
 #include "log.h"
 #include "delay.h"
 #include "math.h"

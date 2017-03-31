@@ -1,6 +1,6 @@
 #include "I2Cdev.h"
 #include <stm32f10x.h>
-#include "mpu.h"
+#include "imu.h"
 #include "delay.h"
 /** Default constructor.
  */
