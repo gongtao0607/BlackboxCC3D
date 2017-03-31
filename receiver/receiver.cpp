@@ -9,7 +9,7 @@ static void NVIC_Configuration(void)
 {
 	NVIC_InitTypeDef NVIC_InitStructure;
 	NVIC_InitStructure.NVIC_IRQChannel = RECEIVER_UARTIRQ;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 7;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 3;
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);
