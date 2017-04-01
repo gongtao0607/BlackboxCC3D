@@ -40,7 +40,6 @@ def plot(filename):
 	os.environ["DISPLAY"]=":0"
 	plt.close('all')
 	f, axarr = plt.subplots(columns, sharex=True)
-	axarr[0].set_title('Sharing X axis')
 	x=range(0, rows-1)
 	for i in range(0,columns):
 		axarr[i].plot(x, data[1:,i])

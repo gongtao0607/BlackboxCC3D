@@ -62,9 +62,9 @@ def convert(filename):
 	f = open(filename, "rb")
 	last_pn=0
 	byte = 1
-	csv+="PN,T,CH1,CH2,CH3,CH4,CH5,RPM,X,Y,Z,TX1,TX2,TX3,TX4,TX5,TX6,TX7\n"
-	csv+="65535,65536,2000,2000,2000,2000,2000,0,90,90,90,0,0,0,0,0,0,0\n"
-	csv+="0,0,1000,1000,1000,1000,1000,0,0,0,0,0,0,0,0,0,0,0\n"
+	csv+="T,CH1,CH2,CH3,CH4,CH5,RPM,X,Y,Z,TX1,TX2,TX3,TX4,TX5,TX6,TX7\n"
+	csv+="65536,2000,2000,2000,2000,2000,0,90,90,90,0,0,0,0,0,0,0\n"
+	csv+="0,1000,1000,1000,1000,1000,0,0,0,0,0,0,0,0,0,0,0\n"
 	ypr=[0,0,0]
 	while True:
 		byte = [1]
@@ -99,7 +99,7 @@ def convert(filename):
 		tx=arr[12:19]
 		
 		if pn == (last_pn+1)&0xffff:
-			csv+=str(pn)+","+str(t)
+			csv+=str(t)
 			for i in range(0,5):
 				csv+=","+str(ch[i])
 			csv+=","+str(rpm)
