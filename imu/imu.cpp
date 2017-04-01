@@ -80,12 +80,12 @@ static void EXTI_Configuration(){
 }
 
 void mpu_select(){
-	delay_us(1);
+	delay_us(10);
 	GPIO_WriteBit(GPIOA, GPIO_Pin_4, Bit_RESET);
-	delay_us(1);
+	delay_us(10);
 }
 void mpu_deselect(){
-	delay_us(1);
+	delay_us(10);
 	GPIO_WriteBit(GPIOA, GPIO_Pin_4, Bit_SET);
 }
 
@@ -105,12 +105,10 @@ void imu_init(){
     while(mpu6050.dmpInitialize()!=0);
     mpu6050.setDMPEnabled(true);
     packetSize = mpu6050.dmpGetFIFOPacketSize();
-    mpu6050.setIntDataReadyEnabled(true);
     EXTI_Configuration();
 }
 extern "C" void EXTI3_IRQHandler(){
     if (EXTI_GetITStatus(EXTI_Line3) != RESET){
-    	GPIO_WriteBit(GPIOB, GPIO_Pin_3, Bit_RESET);
         uint8_t mpuIntStatus = mpu6050.getIntStatus();
 
         // get current FIFO count
@@ -120,6 +118,7 @@ extern "C" void EXTI3_IRQHandler(){
         if ((mpuIntStatus & 0x10) || fifoCount == 1024) {
             // reset so we can continue cleanly
         	mpu6050.resetFIFO();
+        	//printf("OVERFLOW\r\n");
         // otherwise, check for DMP data ready interrupt (this should happen frequently)
         } else if (mpuIntStatus & 0x02) {
             // wait for correct available data length, should be a VERY short wait
@@ -166,8 +165,8 @@ extern "C" void EXTI3_IRQHandler(){
             mpu6050.dmpGetGravity(&gravity, &q);
             mpu6050.dmpGetYawPitchRoll(ypr, &q, &gravity);
             */
+        }else{
         }
         EXTI_ClearITPendingBit(EXTI_Line3);
-    	GPIO_WriteBit(GPIOB, GPIO_Pin_3, Bit_SET);
     }
 }

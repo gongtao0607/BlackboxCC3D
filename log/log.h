@@ -11,7 +11,6 @@ extern void log_sync();
 extern "C" {
 #endif
 void log_putchar(const char);
-void log_putchar(const char);
 void log_send(const unsigned char*, unsigned long);
 #ifdef __cplusplus
 }

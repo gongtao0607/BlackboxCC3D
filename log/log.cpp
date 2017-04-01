@@ -2,13 +2,6 @@
 #include <stm32f10x.h>
 #include <string.h>
 #include "usb.h"
-#define cdc_string_size 64
-int16_t cdc_string_pos=0;
-char cdc_string[cdc_string_size];
-
-#define str_tmp_size 16
-char str_tmp[str_tmp_size];
-uint16_t str_tmp_len;
 
 void log_send(const unsigned char *pucBuffer, unsigned long ulCount)
 {
@@ -18,37 +11,23 @@ void log_send(const unsigned char *pucBuffer, unsigned long ulCount)
         while(USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
     }
 }
-void cdc_send(const char *pucBuffer, uint16_t ulCount)
-{
-	if(ulCount>cdc_string_size)return;
-	if(cdc_string_pos+ulCount>=cdc_string_size){
-		CDC_Send_DATA ((uint8_t*)cdc_string, cdc_string_pos);
-		cdc_string_pos=0;
-	}
-	memcpy(cdc_string+cdc_string_pos ,pucBuffer, ulCount);
-	cdc_string_pos+=ulCount;
-}
 
 void log_1(uint8_t n){
 	log_send((uint8_t*)&n,sizeof(n));
-	str_tmp_len=snprintf(str_tmp, str_tmp_size, "%4hhu",n);
-	cdc_send(str_tmp,str_tmp_len);
+	printf("%4hhu",n);
 }
 void log_1(uint16_t n){
 	log_send((uint8_t*)&n,sizeof(n));
-	str_tmp_len=snprintf(str_tmp, str_tmp_size, "%6hu",n);
-	cdc_send(str_tmp,str_tmp_len);
+	printf("%6hu",n);
 }
 void log_1(float n){
 	log_send((uint8_t*)&n,sizeof(n));
-	str_tmp_len=snprintf(str_tmp, str_tmp_size, "%8.4f", n);
-	cdc_send(str_tmp,str_tmp_len);
+	printf("%8.4f", n);
 }
 void log_sync(){
 	uint16_t n=0x7f7f;
 	log_send((uint8_t*)&n,sizeof(n));
-	str_tmp_len=snprintf(str_tmp, str_tmp_size, "\r\n");
-	cdc_send(str_tmp,str_tmp_len);
+	printf("\r\n");
 }
 
 void log_init()

@@ -1268,8 +1268,10 @@ typedef struct
   * @{
   */
 
-
-#define FLASH_BASE            ((uint32_t)0x08000000) /*!< FLASH base address in the alias region */
+#ifndef FLASH_BASE
+#error "FLASH_BASE not defined. 0x08003000 for run with OpenPilot Bootloader, 0x08000000 for native run."
+#endif
+//#define FLASH_BASE            ((uint32_t)0x08000000) /*!< FLASH base address in the alias region */
 #define SRAM_BASE             ((uint32_t)0x20000000) /*!< SRAM base address in the alias region */
 #define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
 

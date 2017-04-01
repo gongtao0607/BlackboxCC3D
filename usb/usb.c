@@ -38,10 +38,11 @@
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
 /* Extern variables ----------------------------------------------------------*/
-extern __IO uint8_t Receive_Buffer[64];
+extern __IO uint8_t Receive_Buffer[VIRTUAL_COM_PORT_DATA_SIZE];
 extern __IO  uint32_t Receive_length ;
-extern __IO  uint32_t length ;
-uint8_t Send_Buffer[64];
+//extern __IO  uint32_t length;
+uint8_t Send_Buffer[VIRTUAL_COM_PORT_DATA_SIZE];
+uint8_t Send_Buffer_pos=0;
 uint32_t packet_sent=1;
 uint32_t packet_receive=1;
 /* Private function prototypes -----------------------------------------------*/
@@ -59,6 +60,15 @@ void usb_init(void)
 	Set_USBClock();
 	USB_Interrupts_Config();
 	USB_Init();
-} 
+}
+
+void usb_putchar(const char c){
+	Send_Buffer[Send_Buffer_pos++]=c;
+	if( c=='\n' || Send_Buffer_pos >= VIRTUAL_COM_PORT_DATA_SIZE -1 ){
+		//(Max buffer size is not allowed)
+		CDC_Send_DATA(Send_Buffer, Send_Buffer_pos);
+		Send_Buffer_pos=0;
+	}
+}
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

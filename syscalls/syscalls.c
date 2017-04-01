@@ -98,7 +98,7 @@ int _write(int file, char *ptr, int len)
      {
         // UART_PutChar is user's basic output function
         //UART_PutChar(*ptr++);
-    	log_putchar(*ptr++);
+    	usb_putchar(*ptr++);
      }
 #endif
 

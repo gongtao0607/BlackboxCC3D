@@ -10,7 +10,9 @@ The Quaternion computed by MPU6050 DMP module is recorded. The quaternion can be
 * DSM2 satellite signal:
 Can be used to record transmitter signals.
 
-The BlackboxCC3D send sampled data to Main Port (USART1). By connecting to an OpenLog module, all the data can be stored to an Micro-SD card. The data can be decoded and analyzed/visualized by a python script.
+The BlackboxCC3D sends sampled data to Main Port (USART1) in a binary format. By connecting to an OpenLog module, all the data can be stored to an Micro-SD card. The data can be decoded and analyzed/visualized by a python script.
+
+After connect the USB port to a PC, the BlackboxCC3D also emulates as a USB-CDC device. One can use a Serial port tool to see readable data in real-time
 
 # Connection
 ## PWM/RPM signals:
@@ -44,3 +46,4 @@ The satellite signal can either run to USART1 (Main Port), which will be shared 
 
 ## OpenLog:
 The OpenLog module need to connect to the Main Port for data storage. 3 wires (GND, VCC, TX) should connect to the OpenLog (GND, VCC, *RX*). If Main Port is shared by OpenLog and DSM2 satellite, only one baud rate can run (115200, since the satellite runs on that)
+

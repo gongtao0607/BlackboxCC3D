@@ -34,6 +34,7 @@ int main()
 	log_init();
 	receiver_init();
 	usb_init();
+	setvbuf(stdout, NULL, _IONBF, 0);
 	while(1){
 //#define NOLOG
 #ifndef NOLOG
@@ -55,6 +56,11 @@ int main()
 		for(i=0;i<7;++i){
 			log_1(receiver_channel[i]);
 		}
+#else
+		GPIO_WriteBit(GPIOB, GPIO_Pin_3, Bit_RESET);
+		delay_ms(500);
+		GPIO_WriteBit(GPIOB, GPIO_Pin_3, Bit_SET);
+		delay_ms(500);
 #endif
 	}
 }
