@@ -80,12 +80,12 @@ static void EXTI_Configuration(){
 }
 
 void mpu_select(){
-	delay_us(10);
+	delay_us(1);
 	GPIO_WriteBit(GPIOA, GPIO_Pin_4, Bit_RESET);
-	delay_us(10);
+	delay_us(1);
 }
 void mpu_deselect(){
-	delay_us(10);
+	delay_us(1);
 	GPIO_WriteBit(GPIOA, GPIO_Pin_4, Bit_SET);
 }
 
@@ -109,6 +109,7 @@ void imu_init(){
 }
 extern "C" void EXTI3_IRQHandler(){
     if (EXTI_GetITStatus(EXTI_Line3) != RESET){
+		GPIO_WriteBit(GPIOB, GPIO_Pin_3, Bit_RESET);
         uint8_t mpuIntStatus = mpu6050.getIntStatus();
 
         // get current FIFO count
@@ -118,7 +119,6 @@ extern "C" void EXTI3_IRQHandler(){
         if ((mpuIntStatus & 0x10) || fifoCount == 1024) {
             // reset so we can continue cleanly
         	mpu6050.resetFIFO();
-        	//printf("OVERFLOW\r\n");
         // otherwise, check for DMP data ready interrupt (this should happen frequently)
         } else if (mpuIntStatus & 0x02) {
             // wait for correct available data length, should be a VERY short wait
@@ -137,36 +137,9 @@ extern "C" void EXTI3_IRQHandler(){
             quaternion[1]=q.x;
             quaternion[2]=q.y;
             quaternion[3]=q.z;
-            /*
-            q.normalize();
-            Quaternion qd=q0.getConjugate().getProduct(q);
-            q0=q;
-            float yprd[3]={
-            		atan2(2*qd.w*qd.z + 2*qd.x*qd.y, 1-2*qd.y*qd.y-2*qd.z*qd.z)*180/M_PI,
-            		asin(2*qd.w*qd.y - 2*qd.z*qd.x)*180/M_PI,
-            		atan2(2*qd.w*qd.x + 2*qd.y*qd.z, 1-2*qd.x*qd.x-2*qd.y*qd.y)*180/M_PI,
-            };
-            if(yprd[0]==yprd[0]){
-            	ypr[0]+=yprd[0];
-            	if(ypr[0]>180)ypr[0]-=360;
-            	if(ypr[0]<-180)ypr[0]+=360;
-            }
-            if(yprd[1]==yprd[1]){
-            	ypr[1]+=yprd[1];
-            	if(ypr[1]>180)ypr[1]-=360;
-            	if(ypr[1]<-180)ypr[1]+=360;
-            }
-            if(yprd[2]==yprd[2]){
-            	ypr[2]+=yprd[2];
-            	if(ypr[2]>180)ypr[2]-=360;
-            	if(ypr[2]<-180)ypr[2]+=360;
-            }*/
-            /*
-            mpu6050.dmpGetGravity(&gravity, &q);
-            mpu6050.dmpGetYawPitchRoll(ypr, &q, &gravity);
-            */
         }else{
         }
+		GPIO_WriteBit(GPIOB, GPIO_Pin_3, Bit_SET);
         EXTI_ClearITPendingBit(EXTI_Line3);
     }
 }
