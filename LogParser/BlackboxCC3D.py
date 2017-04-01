@@ -63,16 +63,16 @@ def convert(filename):
 	last_pn=0
 	byte = 1
 	csv+="T,CH1,CH2,CH3,CH4,CH5,RPM,X,Y,Z,TX1,TX2,TX3,TX4,TX5,TX6,TX7\n"
-	csv+="65536,2000,2000,2000,2000,2000,0,90,90,90,0,0,0,0,0,0,0\n"
+	csv+="65536,2000,2000,2000,2000,2000,0,90,90,90,1023,1023,1023,1023,1023,1023,1023\n"
 	csv+="0,1000,1000,1000,1000,1000,0,0,0,0,0,0,0,0,0,0,0\n"
 	ypr=[0,0,0]
+	byte = [1]
 	while True:
-		byte = [1]
+		byte = [byte[len(byte)-1]]
 		while byte[0] != 0x7f:
 			byte = f.read(1)
 			if len(byte)<1:
 				break
-
 		byte = f.read(1)
 		if len(byte)<1:
 			break
@@ -80,11 +80,13 @@ def convert(filename):
 			continue
 		#sync with 0x7f7f
 
-		byte = f.read(46)
-		if len(byte)<46:
+		byte = f.read(47)
+		if len(byte)<47:
 			break
+		if byte[46] != 0x7f:
+			continue
 		
-		arr = struct.unpack("<HH6H4f7H",byte)
+		arr = struct.unpack("<HH6H4f7H",byte[0:46])
 		pn=arr[0]
 		t=arr[1]
 		ch=list(arr[2:7])
@@ -108,6 +110,8 @@ def convert(filename):
 			for i in range(0,7):
 				csv+=","+str(tx[i])
 			csv+="\n"
+		else:
+			print("Nonconsecutive packets", last_pn, "->", pn, "SD card too slow")
 		last_pn = pn
 	f.close()
 	return csv
