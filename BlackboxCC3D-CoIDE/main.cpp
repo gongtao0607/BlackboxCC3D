@@ -41,8 +41,6 @@ int main()
 		static uint16_t pn=0;
 		uint8_t i;
 		++pn;
-		extern uint32_t millis;
-		//pn=(uint16_t)millis;
 		log_sync();
 		log_1(pn);
 		log_1((uint16_t)millis);

@@ -62,7 +62,19 @@ void process()
 
 extern "C" void RECEIVER_UART_HANDLER(void)
 {
-	if (USART_GetITStatus(RECEIVER_UART,USART_IT_RXNE) == SET){
+	/*
+	 * Note:
+	 * A bug from library
+	 * http://electronics.stackexchange.com/questions/224714/stm32-uart-interrupt-is-triggering-without-any-flags-getting-set
+	 * http://electronics.stackexchange.com/questions/222638/clearing-usart-uart-interrupt-flags-in-an-stm32
+	 * If EIE is not enabled, GetITStatus won't return ORE as SET
+	 * However, ORE is SET (when RXNEIE SET) and triggers the interrupt, and require a ReceiveData to clear
+	 *
+	 * Workaround:
+	 * Check ORE flag by USART_GetFlagStatus(USART_FLAG_ORE)
+	 */
+
+	if (USART_GetITStatus(RECEIVER_UART, USART_IT_RXNE) == SET){
 		uint16_t d = USART_ReceiveData(RECEIVER_UART);
 		if(millis-last_rx_ts>5){//starting of a frame
 			pos=0;
@@ -75,5 +87,7 @@ extern "C" void RECEIVER_UART_HANDLER(void)
 			pos=0;
 		}
 		last_rx_ts=millis;
+	} else if(USART_GetFlagStatus(RECEIVER_UART, USART_FLAG_ORE) == SET) {
+		USART_ReceiveData(RECEIVER_UART);
 	}
 }
