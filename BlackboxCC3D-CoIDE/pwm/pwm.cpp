@@ -11,6 +11,18 @@ uint16_t pwm_cycle_width[n_channels]={};
  * S5 IN	S5 OUT
  * S6 OUT	S6 IN //for RPM sensor
  */
+void iwdg_init(){
+    /* Enable write access to IWDG_PR and IWDG_RLR registers */
+	IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable);
+	/* IWDG counter clock: 40KHz / 32 = 1KHz */
+	IWDG_SetPrescaler(IWDG_Prescaler_32);
+	/* Set counter reload value to 20ms */
+	IWDG_SetReload(20*40/32);
+	/* Reload IWDG counter */
+	IWDG_ReloadCounter();
+	/* Enable IWDG (the LSI oscillator will be enabled by hardware) */
+	IWDG_Enable();
+}
 void gpio_init(){
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA|RCC_APB2Periph_GPIOB, ENABLE);
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
@@ -141,6 +153,7 @@ void pwm_edge_trigger(uint8_t ch, uint8_t state, uint16_t capture){
 		pwm_duty_width[ch]=capture-pwm_out[ch].rising_capture;
 		pwm_out[ch].port->BRR = pwm_out[ch].pin;
 	}
+    IWDG_ReloadCounter();
 }
 
 void TIM_IRQHandler(){
@@ -177,4 +190,5 @@ extern "C" void TIM4_IRQHandler(){
 void pwm_init(){
 	gpio_init();
 	tim_init();
+	iwdg_init();
 }
