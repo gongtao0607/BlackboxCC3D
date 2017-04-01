@@ -281,8 +281,12 @@ void Default_Reset_Handler(void)
   * @param  None
   * @retval None  
   */
+#include "stm32f10x.h"//to use NVIC_SystemReset()
 static void Default_Handler(void) 
 {
+#ifdef ENABLE_SAFETY
+  NVIC_SystemReset();
+#endif
   /* Go into an infinite loop. */
   while (1) 
   {

@@ -15,6 +15,8 @@ The BlackboxCC3D sends sampled data to Main Port (USART1) in a binary format. By
 After connect the USB port to a PC, the BlackboxCC3D also emulates as a USB-CDC device. One can use a Serial port tool to see readable data in real-time
 
 # Connection
+Please refer to the wiki page for details
+
 ## PWM/RPM signals:
 ```
 (FBL GYRO)  ((RX Port)  (Output Port))  (Servo/ESC/Sensor)

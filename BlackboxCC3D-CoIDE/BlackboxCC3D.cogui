@@ -23,62 +23,82 @@
 <part id="10"/>
 <part id="11"/>
 <part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="log.cpp" partName="log.cpp" path="D:/Dropbox/BlackboxCC3D/log/log.cpp" title="log.cpp" tooltip="D:/Dropbox/BlackboxCC3D/log/log.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/log/log.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="739"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/main.cpp" title="main.cpp" tooltip="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/main.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/main.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1343" selectionTopPixel="620"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="delay.cpp" partName="delay.cpp" path="D:/Dropbox/BlackboxCC3D/delay/delay.cpp" title="delay.cpp" tooltip="D:/Dropbox/BlackboxCC3D/delay/delay.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/delay/delay.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="287" selectionTopPixel="105"/>
+<editor id="org.coocox.builder.ui.editors.repository.RepositoryBrowser" name="Repository" partName="Repository" title="Repository" tooltip="Repository" workbook="DefaultEditorWorkbook">
+<input factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory">&#x0A;<subPage horizontalPosition="0" selectedItemId="454" subPageIndex="2" verticalPosition="240"/>
+</input>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="hw_config.c" partName="hw_config.c" path="D:/Dropbox/BlackboxCC3D/usb/hw_config.c" title="hw_config.c" tooltip="D:/Dropbox/BlackboxCC3D/usb/hw_config.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/usb/hw_config.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5268" selectionTopPixel="1666"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="startup_stm32f10x_md.c" partName="startup_stm32f10x_md.c" path="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/cmsis_boot/startup/startup_stm32f10x_md.c" title="startup_stm32f10x_md.c" tooltip="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/cmsis_boot/startup/startup_stm32f10x_md.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/cmsis_boot/startup/startup_stm32f10x_md.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="14149" selectionTopPixel="4555"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="misc.h" partName="misc.h" path="D:/Dropbox/BlackboxCC3D/stm_lib/inc/misc.h" title="misc.h" tooltip="D:/Dropbox/BlackboxCC3D/stm_lib/inc/misc.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/stm_lib/inc/misc.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="33" selectionOffset="2002" selectionTopPixel="799"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="pwm.cpp" partName="pwm.cpp" path="D:/Dropbox/BlackboxCC3D/pwm/pwm.cpp" title="pwm.cpp" tooltip="D:/Dropbox/BlackboxCC3D/pwm/pwm.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/pwm/pwm.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="33" selectionOffset="3386" selectionTopPixel="870"/>
-</editor>
-<editor id="org.coocox.builder.ui.editors.ConfigEditor" name="" partName="Configuration" title="Configuration" tooltip="" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.coocox.builder.ui.editors.ConfigEditor" name="" partName="Configuration" title="Configuration" tooltip="" workbook="DefaultEditorWorkbook">
 <input factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory">
 <org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="1" verticalPosition="0"/>
 </input>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="D:/Dropbox/BlackboxCC3D/main.cpp" title="main.cpp" tooltip="D:/Dropbox/BlackboxCC3D/main.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/main.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="48" selectionOffset="1403" selectionTopPixel="654"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="core_cm3.h" partName="core_cm3.h" path="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/cmsis/core_cm3.h" title="core_cm3.h" tooltip="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/cmsis/core_cm3.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/cmsis/core_cm3.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="160" selectionOffset="94270" selectionTopPixel="24956"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="usb_pwr.c" partName="usb_pwr.c" path="D:/Dropbox/BlackboxCC3D/usb/usb_pwr.c" title="usb_pwr.c" tooltip="D:/Dropbox/BlackboxCC3D/usb/usb_pwr.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/usb/usb_pwr.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="7" selectionOffset="2552" selectionTopPixel="870"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="pwm.cpp" partName="pwm.cpp" path="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/pwm/pwm.cpp" title="pwm.cpp" tooltip="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/pwm/pwm.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/pwm/pwm.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1596" selectionTopPixel="90"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="usb_pwr.h" partName="usb_pwr.h" path="D:/Dropbox/BlackboxCC3D/usb/usb_pwr.h" title="usb_pwr.h" tooltip="D:/Dropbox/BlackboxCC3D/usb/usb_pwr.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/usb/usb_pwr.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2096" selectionTopPixel="765"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_conf.h" partName="stm32f10x_conf.h" path="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/cmsis_boot/stm32f10x_conf.h" title="stm32f10x_conf.h" tooltip="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/cmsis_boot/stm32f10x_conf.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/cmsis_boot/stm32f10x_conf.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1431" selectionTopPixel="360"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="usb.c" partName="usb.c" path="D:/Dropbox/BlackboxCC3D/usb/usb.c" title="usb.c" tooltip="D:/Dropbox/BlackboxCC3D/usb/usb.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/usb/usb.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="21" selectionOffset="2503" selectionTopPixel="799"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_dbgmcu.h" partName="stm32f10x_dbgmcu.h" path="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/stm_lib/inc/stm32f10x_dbgmcu.h" title="stm32f10x_dbgmcu.h" tooltip="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/stm_lib/inc/stm32f10x_dbgmcu.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/stm_lib/inc/stm32f10x_dbgmcu.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3546" selectionTopPixel="1470"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="usb.h" partName="usb.h" path="D:/Dropbox/BlackboxCC3D/usb/usb.h" title="usb.h" tooltip="D:/Dropbox/BlackboxCC3D/usb/usb.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/usb/usb.h"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_dbgmcu.c" partName="stm32f10x_dbgmcu.c" path="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/stm_lib/src/stm32f10x_dbgmcu.c" title="stm32f10x_dbgmcu.c" tooltip="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/stm_lib/src/stm32f10x_dbgmcu.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/stm_lib/src/stm32f10x_dbgmcu.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="4676" selectionTopPixel="2108"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="receiver.cpp" partName="receiver.cpp" path="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/receiver/receiver.cpp" title="receiver.cpp" tooltip="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/receiver/receiver.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/receiver/receiver.cpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="misc.c" partName="misc.c" path="D:/Dropbox/BlackboxCC3D/stm_lib/src/misc.c" title="misc.c" tooltip="D:/Dropbox/BlackboxCC3D/stm_lib/src/misc.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/stm_lib/src/misc.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="3277" selectionTopPixel="1734"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="usb_istr.c" partName="usb_istr.c" path="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/usb/usb_istr.c" title="usb_istr.c" tooltip="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/usb/usb_istr.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/usb/usb_istr.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="3476"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="imu.cpp" partName="imu.cpp" path="D:/Dropbox/BlackboxCC3D/imu/imu.cpp" title="imu.cpp" tooltip="D:/Dropbox/BlackboxCC3D/imu/imu.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/imu/imu.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4500" selectionTopPixel="1804"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="usb_endp.c" partName="usb_endp.c" path="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/usb/usb_endp.c" title="usb_endp.c" tooltip="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/usb/usb_endp.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/usb/usb_endp.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2422" selectionTopPixel="858"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="usb.c" partName="usb.c" path="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/usb/usb.c" title="usb.c" tooltip="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/usb/usb.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/usb/usb.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="790"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="hw_config.c" partName="hw_config.c" path="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/usb/hw_config.c" title="hw_config.c" tooltip="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/usb/hw_config.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/usb/hw_config.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="489"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32_it.c" partName="stm32_it.c" path="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/usb/stm32_it.c" title="stm32_it.c" tooltip="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/usb/stm32_it.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/usb/stm32_it.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="479"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="usb_desc.c" partName="usb_desc.c" path="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/usb/usb_desc.c" title="usb_desc.c" tooltip="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/usb/usb_desc.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/usb/usb_desc.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="2490"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="usb_prop.c" partName="usb_prop.c" path="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/usb/usb_prop.c" title="usb_prop.c" tooltip="D:/Dropbox/BlackboxCC3D/BlackboxCC3D-CoIDE/usb/usb_prop.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlackboxCC3D/usb/usb_prop.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="630"/>
 </editor>
 </editors>
 <views>
@@ -87,8 +107,9 @@
 </view>
 <view id="org.eclipse.search.ui.views.SearchView" partName="Search">
 <viewState isPinned="false">
+<view IMemento.internal.id="org.eclipse.cdt.ui.pdomSearchViewPage" definitionColumnWidth="150" locationColumnWidth="300" matchColumnWidth="300" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" showEnclosingDefinitions="true"/>
+<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="2" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
 <view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
-<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
 </viewState>
 </view>
 <view id="org.coocox.codebugger.trace.ui.traceview" partName="Semihosting">
@@ -113,23 +134,29 @@
 </view>
 <view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions">
 <viewState>
-<ExpressionKeySet ExpKeys="q,q0,data,(uint8_t[16])*progBuffer,(uint8_t[16])*verifyBuffer,data[i],(uint8_t[16])*data,i,data,dataSize,getMemoryBank(),bank,address,data,buffer,SystemCoreClock/1000,(int32_t)end,start,"/>
+<ExpressionKeySet ExpKeys="USARTx-&gt;SR,USARTx-&gt;RESERVED0,USARTx,usartreg,(uint8_t) USART_IT,i,pn,"/>
 </viewState>
 </view>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="3">
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="0">
 <expanded>
 <element path="/BlackboxCC3D"/>
+<element path="/BlackboxCC3D/cmsis"/>
+<element path="/BlackboxCC3D/cmsis_boot"/>
+<element path="/BlackboxCC3D/cmsis_boot/startup"/>
 <element path="/BlackboxCC3D/delay"/>
 <element path="/BlackboxCC3D/imu"/>
 <element path="/BlackboxCC3D/log"/>
 <element path="/BlackboxCC3D/pwm"/>
+<element path="/BlackboxCC3D/receiver"/>
 <element path="/BlackboxCC3D/stm_lib"/>
+<element path="/BlackboxCC3D/stm_lib/inc"/>
+<element path="/BlackboxCC3D/stm_lib/src"/>
 <element path="/BlackboxCC3D/syscalls"/>
 <element path="/BlackboxCC3D/usb"/>
 </expanded>
 <selection>
-<element path="/BlackboxCC3D/imu/imu.cpp"/>
+<element path="/BlackboxCC3D"/>
 </selection>
 </viewState>
 </view>
@@ -139,9 +166,9 @@
 <view id="org.eclipse.debug.ui.RegisterView" partName="Registers">
 <viewState/>
 </view>
-<view id="org.coocox.builder.ui.exampleView" partName="USART Examples">
+<view id="org.coocox.builder.ui.exampleView" partName="DBGMCU Examples">
 <viewState>
-<Examples ComponentId="458" Title="USART"/>
+<Examples ComponentId="454" Title="DBGMCU"/>
 </viewState>
 </view>
 <view id="org.eclipse.cdt.ui.callHierarchy" partName="Call Hierarchy">
@@ -157,7 +184,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.coocox.builder.ui.views.ProjectView" activePerspective="org.coocox.builder.perspective.CoBuilder">
+<perspectives activePart="org.coocox.builder.ui.editors.ConfigEditor" activePerspective="org.coocox.builder.perspective.CoBuilder">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.coocox.builder.ui.PerspectiveCoBuilder" id="org.coocox.builder.perspective.CoBuilder" label="CooCox CoBuilder"/>
 <alwaysOnActionSet id="org.coocox.component.ui.actionSet"/>
@@ -230,7 +257,7 @@
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@dccc10" ratio="0.15453117" ratioLeft="295" ratioRight="1614" relationship="2" relative="org.eclipse.ui.internal.ViewStack@15baf0c">
 <folder activePageID="org.coocox.builder.ui.exampleView" appearance="2" expanded="2">
-<page content="org.coocox.builder.ui.exampleView" label="USART Examples"/>
+<page content="org.coocox.builder.ui.exampleView" label="DBGMCU Examples"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 </presentation>
@@ -304,8 +331,8 @@
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <hide_toolbar_item_id id="org.coocox.builder.ui.build"/>
 <hide_toolbar_item_id id="org.coocox.welcome.ui.action.welcome"/>
-<hide_toolbar_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
 <hide_toolbar_item_id id="org.coocox.codebugger.configuration.coideProgramDownloadAction"/>
+<hide_toolbar_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.eclipse.debug.ui.BreakpointView"/>
@@ -313,6 +340,7 @@
 <view id="org.eclipse.debug.ui.VariableView"/>
 <view id="org.eclipse.debug.ui.ExpressionView"/>
 <view id="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
 <view id="org.coocox.builder.ui.views.ProjectView"/>
 <view id="org.eclipse.debug.ui.RegisterView"/>
 <view id="org.eclipse.cdt.dsf.debug.ui.disassembly.view"/>
@@ -340,12 +368,14 @@
 <page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
 <page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="Memory Browser"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.console.ConsoleView:Console View #1" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
@@ -366,178 +396,185 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/usb/usb.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/usb/hw_config.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/log/log.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/main.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/log/log.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/usb/usb.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/syscalls/syscalls.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/log/log.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/cmsis_boot/startup/startup_stm32f10x_md.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/imu/imu.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/stm_lib/src/stm32f10x_iwdg.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/delay/delay.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/usb/hw_config.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/stm_lib/inc/misc.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/pwm/pwm.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/cmsis/core_cm3.h"/>
 <editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor">
 <org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="1" verticalPosition="0"/>
 </editor>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/cmsis/core_cm3.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/cmsis_boot/startup/startup_stm32f10x_md.c"/>
+<editor factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory" id="org.coocox.builder.ui.editors.repository.RepositoryBrowser">
+<subPage horizontalPosition="0" selectedItemId="454" subPageIndex="2" verticalPosition="240"/>
+</editor>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/main.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/usb/usb_pwr.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/usb/usb_pwr.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/pwm/pwm.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/cmsis_boot/stm32f10x_conf.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/stm_lib/inc/stm32f10x_dbgmcu.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/stm_lib/src/stm32f10x_dbgmcu.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/receiver/receiver.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/main.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/usb/usb_istr.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/usb/usb_endp.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/pwm/pwm.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/usb/usb.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/usb/usb.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/usb/hw_config.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/stm_lib/src/misc.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/imu/imu.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/usb/stm32_it.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/usb/usb_desc.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlackboxCC3D/usb/usb_prop.c"/>
+<editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor">
+<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="1" verticalPosition="0"/>
+</editor>
+<editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor">
+<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="1" verticalPosition="0"/>
+</editor>
+<editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor">
+<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="1" verticalPosition="0"/>
+</editor>
 </editors>
-<item historyLabel="hw_config.c" index="1">
-<position info="not_deleted" x="7447" y="54"/>
+<item historyLabel="imu.cpp" index="2">
+<position info="not_deleted" x="5143" y="0"/>
 </item>
-<item historyLabel="usb.c" index="0">
-<position info="not_deleted" x="2801" y="0"/>
+<item historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="654" y="0"/>
 </item>
-<item historyLabel="log.cpp" index="2">
-<position info="not_deleted" x="81" y="0"/>
+<item historyLabel="stm32f10x_iwdg.c" index="3">
+<position info="not_deleted" x="3481" y="14"/>
 </item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="909" y="0"/>
+<item historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="654" y="0"/>
 </item>
-<item historyLabel="usb.c" index="0">
-<position info="not_deleted" x="2548" y="0"/>
+<item historyLabel="delay.cpp" index="4">
+<position info="not_deleted" x="159" y="10"/>
 </item>
-<item historyLabel="log.cpp" index="2">
-<position info="not_deleted" x="1957" y="16"/>
+<item historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="654" y="0"/>
 </item>
-<item historyLabel="log.h" index="4">
-<position info="not_deleted" x="198" y="155"/>
+<item historyLabel="startup_stm32f10x_md.c" index="1">
+<position info="not_deleted" x="14187" y="0"/>
 </item>
-<item historyLabel="usb.h" index="5">
-<position info="not_deleted" x="76" y="0"/>
+<item historyLabel="startup_stm32f10x_md.c" index="1">
+<position info="not_deleted" x="11150" y="0"/>
 </item>
-<item historyLabel="log.cpp" index="2">
-<position info="not_deleted" x="81" y="0"/>
+<item historyLabel="startup_stm32f10x_md.c" index="1">
+<position info="not_deleted" x="14185" y="0"/>
 </item>
-<item historyLabel="usb.c" index="0">
-<position info="not_deleted" x="2546" y="0"/>
-</item>
-<item historyLabel="usb.h" index="5">
-<position info="not_deleted" x="76" y="0"/>
-</item>
-<item historyLabel="log.cpp" index="2">
-<position info="not_deleted" x="81" y="0"/>
-</item>
-<item historyLabel="syscalls.c" index="6">
-<position info="not_deleted" x="1815" y="0"/>
-</item>
-<item historyLabel="log.cpp" index="2">
-<position info="not_deleted" x="657" y="0"/>
-</item>
-<item historyLabel="log.h" index="4">
-<position info="not_deleted" x="196" y="0"/>
-</item>
-<item historyLabel="log.cpp" index="2">
-<position info="not_deleted" x="657" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="909" y="0"/>
-</item>
-<item historyLabel="syscalls.c" index="6">
-<position info="not_deleted" x="1815" y="0"/>
-</item>
-<item historyLabel="log.cpp" index="2">
-<position info="not_deleted" x="657" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="909" y="0"/>
-</item>
-<item historyLabel="syscalls.c" index="6">
-<position info="not_deleted" x="1819" y="0"/>
-</item>
-<item historyLabel="usb.c" index="0">
-<position info="not_deleted" x="2583" y="0"/>
-</item>
-<item historyLabel="log.cpp" index="2">
-<position info="not_deleted" x="657" y="0"/>
-</item>
-<item historyLabel="syscalls.c" index="6">
-<position info="not_deleted" x="1819" y="0"/>
-</item>
-<item historyLabel="syscalls.c" index="6">
-<position info="not_deleted" x="1571" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="1090" y="0"/>
-</item>
-<item historyLabel="log.cpp" index="7">
+<item historyLabel="core_cm3.h" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="delay.cpp" index="8">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="core_cm3.h" index="5">
+<position info="not_deleted" x="94016" y="16"/>
 </item>
-<item historyLabel="delay.cpp" index="8">
-<position info="not_deleted" x="287" y="0"/>
+<item historyLabel="startup_stm32f10x_md.c" index="1">
+<position info="not_deleted" x="14185" y="0"/>
 </item>
-<item historyLabel="hw_config.c" index="9">
-<position info="not_deleted" x="5210" y="33"/>
+<item historyLabel="startup_stm32f10x_md.c" index="1">
+<position info="not_deleted" x="14150" y="0"/>
 </item>
-<item historyLabel="misc.h" index="10">
-<position info="not_deleted" x="2002" y="33"/>
+<item historyLabel="core_cm3.h" index="5">
+<position info="not_deleted" x="94016" y="16"/>
 </item>
-<item historyLabel="hw_config.c" index="9">
-<position info="not_deleted" x="5513" y="33"/>
+<item historyLabel="startup_stm32f10x_md.c" index="1">
+<position info="not_deleted" x="14150" y="0"/>
+</item>
+<item historyLabel="core_cm3.h" index="5">
+<position info="not_deleted" x="94016" y="16"/>
+</item>
+<item historyLabel="startup_stm32f10x_md.c" index="1">
+<position info="not_deleted" x="14088" y="0"/>
+</item>
+<item historyLabel="core_cm3.h" index="5">
+<position info="not_deleted" x="94016" y="16"/>
+</item>
+<item historyLabel="core_cm3.h" index="5">
+<position info="not_deleted" x="94008" y="0"/>
+</item>
+<item historyLabel="startup_stm32f10x_md.c" index="1">
+<position info="not_deleted" x="14088" y="0"/>
+</item>
+<item historyLabel="core_cm3.h" index="5">
+<position info="not_deleted" x="94270" y="160"/>
+</item>
+<item historyLabel="Configuration" index="6"/>
+<item historyLabel="startup_stm32f10x_md.c" index="1">
+<position info="not_deleted" x="14075" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="654" y="0"/>
+</item>
+<item historyLabel="core_cm3.h" index="7">
+<position info="not_deleted" x="94270" y="160"/>
+</item>
+<item historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="1014" y="0"/>
+</item>
+<item historyLabel="startup_stm32f10x_md.c" index="8">
+<position info="not_deleted" x="14075" y="0"/>
+</item>
+<item historyLabel="Repository" index="9"/>
+<item historyLabel="main.cpp" index="10">
+<position info="not_deleted" x="1014" y="0"/>
 </item>
 <item historyLabel="pwm.cpp" index="11">
+<position info="not_deleted" x="337" y="0"/>
+</item>
+<item historyLabel="stm32f10x_conf.h" index="12">
+<position info="not_deleted" x="1431" y="0"/>
+</item>
+<item historyLabel="stm32f10x_dbgmcu.h" index="13">
+<position info="not_deleted" x="3546" y="0"/>
+</item>
+<item historyLabel="stm32f10x_dbgmcu.c" index="14">
+<position info="not_deleted" x="4676" y="13"/>
+</item>
+<item historyLabel="receiver.cpp" index="15">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Configuration" index="12"/>
-<item historyLabel="main.cpp" index="13">
-<position info="not_deleted" x="951" y="0"/>
+<item historyLabel="pwm.cpp" index="11">
+<position info="not_deleted" x="337" y="0"/>
 </item>
-<item historyLabel="usb_pwr.c" index="14">
-<position info="not_deleted" x="2556" y="0"/>
+<item historyLabel="main.cpp" index="16">
+<position info="not_deleted" x="1014" y="0"/>
 </item>
-<item historyLabel="usb_pwr.h" index="15">
-<position info="not_deleted" x="2096" y="0"/>
-</item>
-<item historyLabel="usb_pwr.c" index="14">
-<position info="not_deleted" x="2552" y="7"/>
-</item>
-<item historyLabel="main.cpp" index="13">
-<position info="not_deleted" x="951" y="0"/>
-</item>
-<item historyLabel="usb.c" index="16">
+<item historyLabel="usb_istr.c" index="17">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="usb.h" index="17">
+<item historyLabel="usb_endp.c" index="18">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="usb.c" index="16">
+<item historyLabel="pwm.cpp" index="19">
+<position info="not_deleted" x="5626" y="27"/>
+</item>
+<item historyLabel="usb_endp.c" index="18">
+<position info="not_deleted" x="2422" y="0"/>
+</item>
+<item historyLabel="pwm.cpp" index="19">
+<position info="not_deleted" x="1596" y="0"/>
+</item>
+<item historyLabel="usb.c" index="20">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="hw_config.c" index="18">
-<position info="not_deleted" x="5239" y="0"/>
-</item>
-<item historyLabel="misc.c" index="19">
-<position info="not_deleted" x="3277" y="9"/>
-</item>
-<item historyLabel="usb.c" index="16">
-<position info="not_deleted" x="2503" y="21"/>
-</item>
-<item historyLabel="hw_config.c" index="18">
-<position info="not_deleted" x="5268" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="13">
-<position info="not_deleted" x="1403" y="48"/>
-</item>
-<item historyLabel="misc.c" index="19">
-<position info="not_deleted" x="3277" y="9"/>
-</item>
-<item historyLabel="usb_pwr.c" index="14">
-<position info="not_deleted" x="2552" y="7"/>
-</item>
-<item active="true" historyLabel="imu.cpp" index="20">
+<item historyLabel="hw_config.c" index="21">
 <position info="not_deleted" x="0" y="0"/>
 </item>
+<item historyLabel="stm32_it.c" index="22">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="usb_desc.c" index="23">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="usb_prop.c" index="24">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="stm32_it.c" index="22">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Configuration" index="25"/>
+<item historyLabel="Configuration" index="26"/>
+<item active="true" historyLabel="Configuration" index="27"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -545,52 +582,56 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="imu.cpp" tooltip="BlackboxCC3D/imu/imu.cpp">
-<persistable path="/BlackboxCC3D/imu/imu.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="misc.c" tooltip="BlackboxCC3D/stm_lib/src/misc.c">
-<persistable path="/BlackboxCC3D/stm_lib/src/misc.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb.h" tooltip="BlackboxCC3D/usb/usb.h">
-<persistable path="/BlackboxCC3D/usb/usb.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb.c" tooltip="BlackboxCC3D/usb/usb.c">
-<persistable path="/BlackboxCC3D/usb/usb.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_pwr.h" tooltip="BlackboxCC3D/usb/usb_pwr.h">
-<persistable path="/BlackboxCC3D/usb/usb_pwr.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_pwr.c" tooltip="BlackboxCC3D/usb/usb_pwr.c">
-<persistable path="/BlackboxCC3D/usb/usb_pwr.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="BlackboxCC3D/main.cpp">
-<persistable path="/BlackboxCC3D/main.cpp"/>
+<file factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor" name="" tooltip="">
+<persistable>
+<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="1" verticalPosition="0"/>
+</persistable>
 </file>
 <file factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor" name="" tooltip="">
 <persistable>
 <org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="1" verticalPosition="0"/>
 </persistable>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pwm.cpp" tooltip="BlackboxCC3D/pwm/pwm.cpp">
-<persistable path="/BlackboxCC3D/pwm/pwm.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_prop.c" tooltip="BlackboxCC3D/usb/usb_prop.c">
+<persistable path="/BlackboxCC3D/usb/usb_prop.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="misc.h" tooltip="BlackboxCC3D/stm_lib/inc/misc.h">
-<persistable path="/BlackboxCC3D/stm_lib/inc/misc.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_desc.c" tooltip="BlackboxCC3D/usb/usb_desc.c">
+<persistable path="/BlackboxCC3D/usb/usb_desc.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32_it.c" tooltip="BlackboxCC3D/usb/stm32_it.c">
+<persistable path="/BlackboxCC3D/usb/stm32_it.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="hw_config.c" tooltip="BlackboxCC3D/usb/hw_config.c">
 <persistable path="/BlackboxCC3D/usb/hw_config.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="delay.cpp" tooltip="BlackboxCC3D/delay/delay.cpp">
-<persistable path="/BlackboxCC3D/delay/delay.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb.c" tooltip="BlackboxCC3D/usb/usb.c">
+<persistable path="/BlackboxCC3D/usb/usb.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="log.cpp" tooltip="BlackboxCC3D/log/log.cpp">
-<persistable path="/BlackboxCC3D/log/log.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_endp.c" tooltip="BlackboxCC3D/usb/usb_endp.c">
+<persistable path="/BlackboxCC3D/usb/usb_endp.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_mem.c" tooltip="BlackboxCC3D/stm_usb_fs_lib/src/usb_mem.c">
-<persistable path="/BlackboxCC3D/stm_usb_fs_lib/src/usb_mem.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_istr.c" tooltip="BlackboxCC3D/usb/usb_istr.c">
+<persistable path="/BlackboxCC3D/usb/usb_istr.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="syscalls.c" tooltip="BlackboxCC3D/syscalls/syscalls.c">
-<persistable path="/BlackboxCC3D/syscalls/syscalls.c"/>
+<file factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor" name="" tooltip="">
+<persistable>
+<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="1" verticalPosition="0"/>
+</persistable>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="receiver.cpp" tooltip="BlackboxCC3D/receiver/receiver.cpp">
+<persistable path="/BlackboxCC3D/receiver/receiver.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_dbgmcu.c" tooltip="BlackboxCC3D/stm_lib/src/stm32f10x_dbgmcu.c">
+<persistable path="/BlackboxCC3D/stm_lib/src/stm32f10x_dbgmcu.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_dbgmcu.h" tooltip="BlackboxCC3D/stm_lib/inc/stm32f10x_dbgmcu.h">
+<persistable path="/BlackboxCC3D/stm_lib/inc/stm32f10x_dbgmcu.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_conf.h" tooltip="BlackboxCC3D/cmsis_boot/stm32f10x_conf.h">
+<persistable path="/BlackboxCC3D/cmsis_boot/stm32f10x_conf.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="core_cm3.h" tooltip="BlackboxCC3D/cmsis/core_cm3.h">
+<persistable path="/BlackboxCC3D/cmsis/core_cm3.h"/>
 </file>
 </mruList>
 </workbench>

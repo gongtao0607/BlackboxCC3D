@@ -27,9 +27,9 @@ void led_init(){
 int main()
 {
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
-	delay_init();
-	led_init();
 	pwm_init();
+	led_init();
+	delay_init();
 	imu_init();
 	log_init();
 	receiver_init();

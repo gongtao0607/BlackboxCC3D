@@ -12,6 +12,8 @@ uint16_t pwm_cycle_width[n_channels]={};
  * S6 OUT	S6 IN //for RPM sensor
  */
 void iwdg_init(){
+	//Stop the watchdog during debugging
+	DBGMCU_Config(DBGMCU_IWDG_STOP, ENABLE);
     /* Enable write access to IWDG_PR and IWDG_RLR registers */
 	IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable);
 	/* IWDG counter clock: 40KHz / 32 = 1KHz */
@@ -40,11 +42,11 @@ void gpio_init(){
 
 	GPIO_InitStructure.GPIO_Pin = Pins_A;
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
-	GPIO_ResetBits(GPIOA, Pins_A);
+	GPIO_SetBits(GPIOA, Pins_A);
 
 	GPIO_InitStructure.GPIO_Pin = Pins_B;
 	GPIO_Init(GPIOB, &GPIO_InitStructure);
-	GPIO_ResetBits(GPIOB, Pins_B);
+	GPIO_SetBits(GPIOB, Pins_B);
 
 	//Input
 	Pins_A=GPIO_Pin_0|GPIO_Pin_2;

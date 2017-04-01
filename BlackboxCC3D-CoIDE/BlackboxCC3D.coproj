@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Project version="2G - 1.7.8" name="BlackboxCC3D">
-  <Target name="BlackboxCC3D" isCurrent="0">
+  <Target name="BlackboxCC3D" isCurrent="1">
     <Device manufacturerId="9" manufacturerName="ST" chipId="306" chipName="STM32F103CB" boardId="" boardName=""/>
     <BuildOption>
       <Compile>
@@ -46,7 +46,7 @@
       </Output>
       <User>
         <UserRun name="Run#1" type="Before" checked="0" value=""/>
-        <UserRun name="Run#1" type="After" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="1" value="xcopy /y ${output.path}\Debug\bin ${project.path}\..\Bin /s"/>
       </User>
     </BuildOption>
     <DebugOption>
@@ -71,7 +71,7 @@
     </DebugOption>
     <ExcludeFile/>
   </Target>
-  <Target name="BlackboxCC3D-OPFW" isCurrent="1">
+  <Target name="BlackboxCC3D-OPFW" isCurrent="0">
     <Device manufacturerId="9" manufacturerName="ST" chipId="306" chipName="STM32F103CB" boardId="" boardName=""/>
     <BuildOption>
       <Compile>
@@ -88,6 +88,7 @@
           <Define name="USE_STDPERIPH_DRIVER"/>
           <Define name="__ASSEMBLY__"/>
           <Define name="FLASH_BASE=((uint32_t)0x08003000)"/>
+          <Define name="ENABLE_SAFETY"/>
         </DefinedSymbols>
       </Compile>
       <Link useDefault="0">
@@ -117,7 +118,7 @@
       </Output>
       <User>
         <UserRun name="Run#1" type="Before" checked="0" value=""/>
-        <UserRun name="Run#1" type="After" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="1" value="xcopy /y ${output.path}\Debug\bin ${project.path}\..\Bin /s"/>
       </User>
     </BuildOption>
     <DebugOption>
@@ -150,7 +151,9 @@
     <Component id="442" name="PWR" path="" type="2"/>
     <Component id="444" name="GPIO" path="" type="2"/>
     <Component id="445" name="EXTI" path="" type="2"/>
+    <Component id="449" name="IWDG" path="" type="2"/>
     <Component id="452" name="SPI" path="" type="2"/>
+    <Component id="454" name="DBGMCU" path="" type="2"/>
     <Component id="456" name="TIM" path="" type="2"/>
     <Component id="458" name="USART" path="" type="2"/>
     <Component id="467" name="MISC" path="" type="2"/>
@@ -162,23 +165,26 @@
   <Files>
     <File name="stm_usb_fs_lib/inc/usb_init.h" path="stm_usb_fs_lib/inc/usb_init.h" type="1"/>
     <File name="stm_usb_fs_lib/src" path="" type="2"/>
-    <File name="stm_usb_fs_lib/inc/usb_core.h" path="stm_usb_fs_lib/inc/usb_core.h" type="1"/>
     <File name="imu/I2Cdev.cpp" path="imu/I2Cdev.cpp" type="1"/>
+    <File name="stm_usb_fs_lib/inc/usb_core.h" path="stm_usb_fs_lib/inc/usb_core.h" type="1"/>
     <File name="imu/imu.cpp" path="imu/imu.cpp" type="1"/>
-    <File name="stm_usb_fs_lib/inc/usb_mem.h" path="stm_usb_fs_lib/inc/usb_mem.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_dbgmcu.c" path="stm_lib/src/stm32f10x_dbgmcu.c" type="1"/>
     <File name="stm_usb_fs_lib/inc/otgd_fs_regs.h" path="stm_usb_fs_lib/inc/otgd_fs_regs.h" type="1"/>
+    <File name="stm_usb_fs_lib/inc/usb_mem.h" path="stm_usb_fs_lib/inc/usb_mem.h" type="1"/>
     <File name="usb/stm32_it.h" path="usb/stm32_it.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_pwr.h" path="stm_lib/inc/stm32f10x_pwr.h" type="1"/>
     <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
     <File name="stm_lib/src/misc.c" path="stm_lib/src/misc.c" type="1"/>
     <File name="cmsis_boot/stm32f10x.h" path="cmsis_boot/stm32f10x.h" type="1"/>
     <File name="delay" path="" type="2"/>
+    <File name="stm_lib/inc/stm32f10x_dbgmcu.h" path="stm_lib/inc/stm32f10x_dbgmcu.h" type="1"/>
     <File name="cmsis_boot/stm32f10x_conf.h" path="cmsis_boot/stm32f10x_conf.h" type="1"/>
     <File name="imu/MPU6050.h" path="imu/MPU6050.h" type="1"/>
     <File name="usb/usb_istr.h" path="usb/usb_istr.h" type="1"/>
     <File name="receiver" path="" type="2"/>
     <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_spi.h" path="stm_lib/inc/stm32f10x_spi.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_iwdg.h" path="stm_lib/inc/stm32f10x_iwdg.h" type="1"/>
     <File name="usb/stm32_it.c" path="usb/stm32_it.c" type="1"/>
     <File name="stm_usb_fs_lib/src/usb_sil.c" path="stm_usb_fs_lib/src/usb_sil.c" type="1"/>
     <File name="cmsis_boot/startup/startup_stm32f10x_md.c" path="cmsis_boot/startup/startup_stm32f10x_md.c" type="1"/>
@@ -186,10 +192,10 @@
     <File name="stm_usb_fs_lib/src/otgd_fs_cal.c" path="stm_usb_fs_lib/src/otgd_fs_cal.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_usart.h" path="stm_lib/inc/stm32f10x_usart.h" type="1"/>
     <File name="stm_usb_fs_lib/inc/usb_sil.h" path="stm_usb_fs_lib/inc/usb_sil.h" type="1"/>
-    <File name="cmsis_boot/system_stm32f10x.c" path="cmsis_boot/system_stm32f10x.c" type="1"/>
     <File name="imu/pgmspace.h" path="imu/pgmspace.h" type="1"/>
-    <File name="stm_usb_fs_lib/src/usb_int.c" path="stm_usb_fs_lib/src/usb_int.c" type="1"/>
+    <File name="cmsis_boot/system_stm32f10x.c" path="cmsis_boot/system_stm32f10x.c" type="1"/>
     <File name="stm_lib/inc/misc.h" path="stm_lib/inc/misc.h" type="1"/>
+    <File name="stm_usb_fs_lib/src/usb_int.c" path="stm_usb_fs_lib/src/usb_int.c" type="1"/>
     <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
     <File name="stm_usb_fs_lib/inc" path="" type="2"/>
     <File name="stm_usb_fs_lib/inc/otgd_fs_int.h" path="stm_usb_fs_lib/inc/otgd_fs_int.h" type="1"/>
@@ -214,8 +220,8 @@
     <File name="usb/usb_desc.c" path="usb/usb_desc.c" type="1"/>
     <File name="delay/delay.cpp" path="delay/delay.cpp" type="1"/>
     <File name="log/log.h" path="log/log.h" type="1"/>
-    <File name="receiver/receiver.h" path="receiver/receiver.h" type="1"/>
     <File name="pwm" path="" type="2"/>
+    <File name="receiver/receiver.h" path="receiver/receiver.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_tim.h" path="stm_lib/inc/stm32f10x_tim.h" type="1"/>
     <File name="cmsis_boot" path="" type="2"/>
     <File name="usb/hw_config.c" path="usb/hw_config.c" type="1"/>
@@ -225,6 +231,7 @@
     <File name="cmsis_boot/startup" path="" type="2"/>
     <File name="stm_usb_fs_lib/inc/usb_regs.h" path="stm_usb_fs_lib/inc/usb_regs.h" type="1"/>
     <File name="stm_usb_fs_lib/inc/usb_int.h" path="stm_usb_fs_lib/inc/usb_int.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_iwdg.c" path="stm_lib/src/stm32f10x_iwdg.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_spi.c" path="stm_lib/src/stm32f10x_spi.c" type="1"/>
     <File name="delay/delay.h" path="delay/delay.h" type="1"/>
     <File name="receiver/receiver.cpp" path="receiver/receiver.cpp" type="1"/>
@@ -232,8 +239,8 @@
     <File name="usb" path="" type="2"/>
     <File name="usb/usb.h" path="usb/usb.h" type="1"/>
     <File name="stm_usb_fs_lib/inc/otgd_fs_dev.h" path="stm_usb_fs_lib/inc/otgd_fs_dev.h" type="1"/>
-    <File name="imu/imu.h" path="imu/imu.h" type="1"/>
     <File name="stm_lib/src/stm32f10x_usart.c" path="stm_lib/src/stm32f10x_usart.c" type="1"/>
+    <File name="imu/imu.h" path="imu/imu.h" type="1"/>
     <File name="stm_usb_fs_lib/src/otgd_fs_int.c" path="stm_usb_fs_lib/src/otgd_fs_int.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_pwr.c" path="stm_lib/src/stm32f10x_pwr.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_gpio.h" path="stm_lib/inc/stm32f10x_gpio.h" type="1"/>
