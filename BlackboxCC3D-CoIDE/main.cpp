@@ -4,9 +4,9 @@
 #include "imu.h"
 #include "log.h"
 #include "delay.h"
-#include "math.h"
 #include "receiver.h"
 #include "usb.h"
+#include "morsecode.h"
 
 void led_init(){
 	//Enable remap clock (AFIO)
@@ -29,36 +29,14 @@ int main()
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
 	pwm_init();
 	led_init();
+	setvbuf(stdout, NULL, _IONBF, 0);
 	delay_init();
 	imu_init();
-	log_init();
 	receiver_init();
 	usb_init();
-	setvbuf(stdout, NULL, _IONBF, 0);
+	log_init();
+	morse_error_code(ERROR_NOERROR);
 	while(1){
-//#define NOLOG
-#ifndef NOLOG
-		static uint16_t pn=0;
-		uint8_t i;
-		++pn;
-		log_sync();
-		log_1(pn);
-		log_1((uint16_t)millis);
-		for(i=0;i<5;++i){
-			log_1(pwm_duty_width[i]);
-		}
-		log_1(pwm_cycle_width[5]);
-		for(i=0;i<4;++i){
-			log_1(quaternion[i]);
-		}
-		for(i=0;i<7;++i){
-			log_1(receiver_channel[i]);
-		}
-#else
-		GPIO_WriteBit(GPIOB, GPIO_Pin_3, Bit_RESET);
-		delay_ms(500);
-		GPIO_WriteBit(GPIOB, GPIO_Pin_3, Bit_SET);
-		delay_ms(500);
-#endif
+		morse_send();
 	}
 }

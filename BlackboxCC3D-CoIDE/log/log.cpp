@@ -3,6 +3,12 @@
 #include <string.h>
 #include "usb.h"
 
+#include "pwm.h"
+#include "imu.h"
+#include "receiver.h"
+#include "usb.h"
+#include "delay.h"
+
 void log_send(const unsigned char *pucBuffer, unsigned long ulCount)
 {
     while(ulCount--)
@@ -30,30 +36,32 @@ void log_sync(){
 	printf("\r\n");
 }
 
+void tim_config(){
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM1, ENABLE);
+
+	TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
+	TIM_TimeBaseStructInit(&TIM_TimeBaseStructure);
+	TIM_TimeBaseStructure.TIM_Prescaler = (SystemCoreClock / 100000) - 1;
+	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+	TIM_TimeBaseStructure.TIM_Period = 800-1; //10ms
+	TIM_TimeBaseStructure.TIM_ClockDivision = 0;
+	TIM_TimeBaseInit(TIM1, &TIM_TimeBaseStructure);
+	TIM_Cmd(TIM1, ENABLE);
+
+	NVIC_InitTypeDef NVIC_InitStructure;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 15;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_InitStructure.NVIC_IRQChannel = TIM1_UP_IRQn;
+	NVIC_Init(&NVIC_InitStructure);
+
+	TIM_ClearITPendingBit(TIM1, TIM_IT_Update);
+    TIM_ITConfig(TIM1, TIM_IT_Update, ENABLE);
+}
+
 void log_init()
 {
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA | RCC_APB2Periph_GPIOB | RCC_APB2Periph_USART1, ENABLE);
-
-	//TX
-	GPIO_InitTypeDef GPIO_InitStructure;
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOA, &GPIO_InitStructure);
-
-	//RX
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOA, &GPIO_InitStructure);
-
-	//INV
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOB, &GPIO_InitStructure);
-	GPIO_WriteBit(GPIOB, GPIO_Pin_2, Bit_RESET);
-
+	/*
 	USART_InitTypeDef USART_InitStructure;
 	USART_InitStructure.USART_BaudRate = 115200;
 	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
@@ -62,10 +70,33 @@ void log_init()
 	USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
 	USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
 	USART_Init(USART1, &USART_InitStructure);
-	USART_Cmd(USART1, ENABLE);
+	USART_Cmd(USART1, ENABLE);*/
+
+	tim_config();
 }
 extern "C" void log_putchar(const char c)
 {
 	USART_SendData(USART1, c);
 	while(USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
+}
+extern "C" void TIM1_UP_IRQHandler(){
+	if(TIM_GetITStatus(TIM1, TIM_IT_Update)!= RESET){
+		TIM_ClearITPendingBit(TIM1, TIM_IT_Update);
+		static uint16_t pn=0;
+		uint8_t i;
+		++pn;
+		log_sync();
+		log_1(pn);
+		log_1((uint16_t)millis);
+		for(i=0;i<5;++i){
+			log_1(pwm_duty_width[i]);
+		}
+		log_1(pwm_cycle_width[5]);
+		for(i=0;i<4;++i){
+			log_1(quaternion[i]);
+		}
+		for(i=0;i<7;++i){
+			log_1(receiver_channel[i]);
+		}
+	}
 }

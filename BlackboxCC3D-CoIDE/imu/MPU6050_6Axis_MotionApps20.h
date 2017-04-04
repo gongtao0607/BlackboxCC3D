@@ -414,13 +414,13 @@ uint8_t MPU6050::dmpInitialize() {
             setIntEnabled(0x12);
 
             DEBUG_PRINTLN(F("Setting sample rate to 200Hz..."));
-            setRate(4); // 1khz / (1 + 4) = 200 Hz
+            setRate(0);//100hz // 1khz / (1 + 4) = 200 Hz
 
             DEBUG_PRINTLN(F("Setting external frame sync to TEMP_OUT_L[0]..."));
             setExternalFrameSync(MPU6050_EXT_SYNC_TEMP_OUT_L);
 
             DEBUG_PRINTLN(F("Setting DLPF bandwidth to 42Hz..."));
-            setDLPFMode(MPU6050_DLPF_BW_256);//setDLPFMode(MPU6050_DLPF_BW_42);
+            setDLPFMode(MPU6050_DLPF_BW_188);//setDLPFMode(MPU6050_DLPF_BW_42);
 
             DEBUG_PRINTLN(F("Setting gyro sensitivity to +/- 2000 deg/sec..."));
             setFullScaleGyroRange(MPU6050_GYRO_FS_2000);

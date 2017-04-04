@@ -56,6 +56,7 @@ static void SPI_Configuration()
 
 static void EXTI_Configuration(){
 	GPIO_InitTypeDef GPIO_InitStructure;
+	GPIO_StructInit(&GPIO_InitStructure);
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
@@ -109,7 +110,7 @@ void imu_init(){
 }
 extern "C" void EXTI3_IRQHandler(){
     if (EXTI_GetITStatus(EXTI_Line3) != RESET){
-		GPIO_WriteBit(GPIOB, GPIO_Pin_3, Bit_RESET);
+		//GPIO_WriteBit(GPIOB, GPIO_Pin_3, Bit_RESET);
         uint8_t mpuIntStatus = mpu6050.getIntStatus();
 
         // get current FIFO count
@@ -139,7 +140,7 @@ extern "C" void EXTI3_IRQHandler(){
             quaternion[3]=q.z;
         }else{
         }
-		GPIO_WriteBit(GPIOB, GPIO_Pin_3, Bit_SET);
+		//GPIO_WriteBit(GPIOB, GPIO_Pin_3, Bit_SET);
         EXTI_ClearITPendingBit(EXTI_Line3);
     }
 }

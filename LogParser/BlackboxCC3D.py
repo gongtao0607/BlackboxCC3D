@@ -42,21 +42,21 @@ def pwm_trim(ch):
 		return 2500
 	return ch
 q0=Quaternion(1,0,0,0)
-def angle_integral(ypr,q):
+def angle_integral(xyz,q):
 	global q0
 	q.normalize()
 	qd=q0.getConjugate().getProduct(q)
 	yprd=qd.getEular()
 	q0=q
-	ypr[0]+=yprd[0]
-	ypr[1]+=yprd[1]
-	ypr[2]+=yprd[2]
+	xyz[0]-=yprd[2]#CC3D X = MPU -Y = -Roll
+	xyz[1]-=yprd[1]#CC3D Y = MPU -X = -Pitch
+	xyz[2]+=yprd[0]#CC3D Z = MPU Z  = Yaw
 	for i in range(0,3):
-		while ypr[i]>90:
-			ypr[i]-=90
-		while ypr[i]<0:
-			ypr[i]+=90
-	return ypr	
+		while xyz[i]>90:
+			xyz[i]-=45
+		while xyz[i]<0:
+			xyz[i]+=45
+	return xyz	
 def convert(filename):
 	csv=""
 	f = open(filename, "rb")
@@ -65,7 +65,7 @@ def convert(filename):
 	csv+="T,CH1,CH2,CH3,CH4,CH5,RPM,X,Y,Z,TX1,TX2,TX3,TX4,TX5,TX6,TX7\n"
 	csv+="65536,2000,2000,2000,2000,2000,0,90,90,90,1023,1023,1023,1023,1023,1023,1023\n"
 	csv+="0,1000,1000,1000,1000,1000,0,0,0,0,0,0,0,0,0,0,0\n"
-	ypr=[0,0,0]
+	xyz=[0,0,0]
 	byte = [1]
 	while True:
 		byte = [byte[len(byte)-1]]
@@ -95,7 +95,7 @@ def convert(filename):
 		else:
 			rpm=0
 		q=arr[8:12]
-		ypr=angle_integral(ypr,Quaternion(q[0],q[1],q[2],q[3]))
+		xyz=angle_integral(xyz,Quaternion(q[0],q[1],q[2],q[3]))
 		for i in range(0,5):
 			ch[i]=pwm_trim(ch[i])
 		tx=arr[12:19]
@@ -106,7 +106,7 @@ def convert(filename):
 				csv+=","+str(ch[i])
 			csv+=","+str(rpm)
 			for i in range(0,3):
-				csv+=","+str(ypr[i])
+				csv+=","+str(xyz[i])
 			for i in range(0,7):
 				csv+=","+str(tx[i])
 			csv+="\n"

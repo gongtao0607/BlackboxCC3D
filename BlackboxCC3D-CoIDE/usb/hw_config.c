@@ -129,7 +129,7 @@ void Leave_LowPowerMode(void)
 void USB_Interrupts_Config(void)
 {
 	NVIC_InitTypeDef NVIC_InitStructure;
- 
+
 	/* Enable the USB interrupt */
 	NVIC_InitStructure.NVIC_IRQChannel = USB_LP_CAN1_RX0_IRQn;
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 4;

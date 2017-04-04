@@ -23,7 +23,9 @@ void iwdg_init(){
 	/* Reload IWDG counter */
 	IWDG_ReloadCounter();
 	/* Enable IWDG (the LSI oscillator will be enabled by hardware) */
+#ifdef ENABLE_SAFETY
 	IWDG_Enable();
+#endif
 }
 void gpio_init(){
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA|RCC_APB2Periph_GPIOB, ENABLE);
@@ -65,6 +67,7 @@ void tim_init(){
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2|RCC_APB1Periph_TIM3|RCC_APB1Periph_TIM4, ENABLE);
 
 	TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
+	TIM_TimeBaseStructInit(&TIM_TimeBaseStructure);
 	TIM_TimeBaseStructure.TIM_Prescaler = (SystemCoreClock / 1000000) - 1;
 	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
 	TIM_TimeBaseStructure.TIM_Period = (uint16_t)-1;//free run?
@@ -77,6 +80,7 @@ void tim_init(){
 	TIM_Cmd(TIM4, ENABLE);
 
 	TIM_ICInitTypeDef TIM_ICInitStructure;
+	TIM_ICStructInit(&TIM_ICInitStructure);
     TIM_ICInitStructure.TIM_ICPolarity = TIM_ICPolarity_Rising;
     TIM_ICInitStructure.TIM_ICSelection = TIM_ICSelection_DirectTI;
     TIM_ICInitStructure.TIM_ICPrescaler = TIM_ICPSC_DIV1;

@@ -1,10 +1,11 @@
-#!/bin/python3
+#!/usr/bin/python3
 import matplotlib.pyplot as plt
 import sys
 import os
 import functools
 import io
 import numpy as np
+import json
 
 genfromtxt_old = np.genfromtxt
 @functools.wraps(genfromtxt_old)
@@ -34,17 +35,35 @@ if sys.version_info >= (3,):
 	np.genfromtxt = genfromtxt_py3_fixed
 
 def plot(filename):
-	data = np.genfromtxt(filename, delimiter=',')
+	format_json=json.load(open("format.json","r"))
+	data = np.genfromtxt(filename, delimiter=',', dtype=None)
 	[rows, columns]=data.shape
+	column_name=[]
+	for i in range(0,columns):
+		column_name.append(data[0,i].decode("utf-8"))
 		
 	os.environ["DISPLAY"]=":0"
 	plt.close('all')
-	f, axarr = plt.subplots(columns, sharex=True)
+	f, axarr = plt.subplots(len(format_json), sharex=True)
 	x=range(0, rows-1)
-	for i in range(0,columns):
-		axarr[i].plot(x, data[1:,i])
+	for i in range(0,len(format_json)):
+		for j in range(0,columns):
+			if format_json[i] == column_name[j]:
+				break;
+		if format_json[i] != column_name[j]:
+			continue
+		axarr[i].set_ylabel(column_name[j],rotation=0,ha='left')
+		axarr[i].yaxis.set_label_coords(0.02,0.75)
+		axarr[i].plot(x, data[1:,j])
+		axarr[i].yaxis.set_tick_params(which='both', direction='in')
+		axarr[i].grid(True)
 		
+	#f.tight_layout()
+	#f.subplots_adjust(left=0.02, right=1, top=1, bottom=0)
+	f.subplots_adjust(right=1, top=1, bottom=0)
 	f.subplots_adjust(hspace=0)
+
+	plt.setp([a.get_xticklabels() for a in f.axes], visible=False)
 	plt.show()
 
 def main():
