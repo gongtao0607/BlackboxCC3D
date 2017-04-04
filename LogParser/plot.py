@@ -59,8 +59,8 @@ def plot(filename):
 		axarr[i].grid(True)
 		
 	#f.tight_layout()
-	#f.subplots_adjust(left=0.02, right=1, top=1, bottom=0)
-	f.subplots_adjust(right=1, top=1, bottom=0)
+	f.subplots_adjust(left=0.02, right=1, top=1, bottom=0)
+	#f.subplots_adjust(right=1, top=1, bottom=0)
 	f.subplots_adjust(hspace=0)
 
 	plt.setp([a.get_xticklabels() for a in f.axes], visible=False)

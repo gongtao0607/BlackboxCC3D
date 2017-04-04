@@ -16,8 +16,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/BlackboxCC3D/receiver/receiver.cpp"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:\Dropbox\BlackboxCC3D\BlackboxCC3D-CoIDE\receiver\receiver.cpp"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 </marker>
 </breakpoint>
 </breakpoints>
